@@ -11,8 +11,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
-namespace io.github.kerwinxu.tools.du
+namespace DiskUsage
 {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
@@ -23,5 +24,8 @@ namespace io.github.kerwinxu.tools.du
         {
             InitializeComponent();
         }
+
+
+          
     }
 }

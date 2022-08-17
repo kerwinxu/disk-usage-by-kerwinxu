@@ -123,13 +123,25 @@
   <data name="btnOpen" xml:space="preserve">
     <value>打开</value>
   </data>
+  <data name="count" xml:space="preserve">
+    <value>个数</value>
+  </data>
+  <data name="load" xml:space="preserve">
+    <value>加载</value>
+  </data>
   <data name="remainder" xml:space="preserve">
     <value>剩余</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="scan" xml:space="preserve">
+    <value>开始扫描</value>
   </data>
   <data name="select a folder" xml:space="preserve">
     <value>选择文件夹</value>
   </data>
   <data name="title" xml:space="preserve">
-    <value>磁盘和文件夹大小</value>
+    <value>硬盘和文件夹大小</value>
   </data>
 </root>

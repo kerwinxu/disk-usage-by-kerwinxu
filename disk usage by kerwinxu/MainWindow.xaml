@@ -1,13 +1,13 @@
-﻿<Window x:Class="disk_usage_by_kerwinxu.MainWindow"
+﻿<Window x:Class="io.github.kerwinxu.tools.du.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:disk_usage_by_kerwinxu"
+        xmlns:local="clr-namespace:io.github.kerwinxu.tools.du"
         mc:Ignorable="d"
         DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
-        xmlns:model ="clr-namespace:disk_usage_by_kerwinxu.Model"
-        xmlns:pros="clr-namespace:disk_usage_by_kerwinxu.Properties"
+        xmlns:model ="clr-namespace:io.github.kerwinxu.tools.du.Model"
+        xmlns:pros="clr-namespace:io.github.kerwinxu.tools.du.Properties"
         Title="{x:Static pros:Resources.title}" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>

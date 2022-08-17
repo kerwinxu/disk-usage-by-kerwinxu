@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace io.github.kerwinxu.tools.du.Properties {
+namespace DiskUsage.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace io.github.kerwinxu.tools.du.Properties {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("io.github.kerwinxu.tools.du.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DiskUsage.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace io.github.kerwinxu.tools.du.Properties {
         }
         
         /// <summary>
-        ///   查找类似 硬盘 的本地化字符串。
+        ///   查找类似 All 的本地化字符串。
         /// </summary>
         public static string all {
             get {
@@ -70,7 +70,7 @@ namespace io.github.kerwinxu.tools.du.Properties {
         }
         
         /// <summary>
-        ///   查找类似 打开 的本地化字符串。
+        ///   查找类似 btnOpen 的本地化字符串。
         /// </summary>
         public static string btnOpen {
             get {
@@ -79,7 +79,25 @@ namespace io.github.kerwinxu.tools.du.Properties {
         }
         
         /// <summary>
-        ///   查找类似 剩余 的本地化字符串。
+        ///   查找类似 Count 的本地化字符串。
+        /// </summary>
+        public static string count {
+            get {
+                return ResourceManager.GetString("count", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Load 的本地化字符串。
+        /// </summary>
+        public static string load {
+            get {
+                return ResourceManager.GetString("load", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Remainder 的本地化字符串。
         /// </summary>
         public static string remainder {
             get {
@@ -88,7 +106,25 @@ namespace io.github.kerwinxu.tools.du.Properties {
         }
         
         /// <summary>
-        ///   查找类似 选择文件夹 的本地化字符串。
+        ///   查找类似 Save 的本地化字符串。
+        /// </summary>
+        public static string save {
+            get {
+                return ResourceManager.GetString("save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Start Scan 的本地化字符串。
+        /// </summary>
+        public static string scan {
+            get {
+                return ResourceManager.GetString("scan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Select A Folder 的本地化字符串。
         /// </summary>
         public static string select_a_folder {
             get {
@@ -97,7 +133,7 @@ namespace io.github.kerwinxu.tools.du.Properties {
         }
         
         /// <summary>
-        ///   查找类似 磁盘和文件夹大小 的本地化字符串。
+        ///   查找类似 Disk Usage 的本地化字符串。
         /// </summary>
         public static string title {
             get {

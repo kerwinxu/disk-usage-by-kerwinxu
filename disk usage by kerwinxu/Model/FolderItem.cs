@@ -6,11 +6,10 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace disk_usage_by_kerwinxu.Model
+namespace io.github.kerwinxu.tools.du.Model
 {
     public  class FolderItem: ObservableObject
     {
-
 
         private FileSystemInfo _info;
         /// <summary>

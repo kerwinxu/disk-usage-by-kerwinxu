@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace disk_usage_by_kerwinxu.Properties {
+namespace io.github.kerwinxu.tools.du.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "disk usage by kerwinxu", "disk usage by kerwinxu\disk usage by kerwinxu.csproj", "{F4CCC9AE-6FCB-4D51-B5ED-60C62F77F03F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskUsage", "DiskUsage\DiskUsage.csproj", "{FB1728A8-FA95-4461-BD6D-86A24B5F1293}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F4CCC9AE-6FCB-4D51-B5ED-60C62F77F03F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4CCC9AE-6FCB-4D51-B5ED-60C62F77F03F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4CCC9AE-6FCB-4D51-B5ED-60C62F77F03F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4CCC9AE-6FCB-4D51-B5ED-60C62F77F03F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB1728A8-FA95-4461-BD6D-86A24B5F1293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB1728A8-FA95-4461-BD6D-86A24B5F1293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB1728A8-FA95-4461-BD6D-86A24B5F1293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB1728A8-FA95-4461-BD6D-86A24B5F1293}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

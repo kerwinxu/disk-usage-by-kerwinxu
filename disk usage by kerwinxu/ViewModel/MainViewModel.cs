@@ -1,4 +1,4 @@
-using disk_usage_by_kerwinxu.Model;
+using io.github.kerwinxu.tools.du.Model;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Threading;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using GalaSoft.MvvmLight.Command;
 using System;
 
 
-namespace disk_usage_by_kerwinxu.ViewModel
+namespace io.github.kerwinxu.tools.du.ViewModel
 {
     /// <summary>
     /// This class contains properties that the main View can data bind to.
@@ -194,7 +194,7 @@ namespace disk_usage_by_kerwinxu.ViewModel
                 List<FolderItem> tmp = all2(DriveInfo.GetDrives().Select(x => x.Name).ToArray());
                 DispatcherHelper.CheckBeginInvokeOnUI(() => {
                     Folder = tmp;
-                    State = "ok";
+                    State = "";
                     Trace.WriteLine("完结");
                 });
             });
@@ -210,12 +210,11 @@ namespace disk_usage_by_kerwinxu.ViewModel
             {
                 Thread t = new Thread(delegate ()
                 {
-
                     List<FolderItem> tmp = all2(new string[] { dlg.SelectedPath });
                     DispatcherHelper.CheckBeginInvokeOnUI(() =>
                     {
                         Folder = tmp;
-                        State = "ok";
+                        State = "";
                         Trace.WriteLine("完结");
                     });
                 });

@@ -118,18 +118,30 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="all" xml:space="preserve">
-    <value>硬盘</value>
+    <value>All</value>
   </data>
   <data name="btnOpen" xml:space="preserve">
-    <value>打开</value>
+    <value>btnOpen</value>
+  </data>
+  <data name="count" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="load" xml:space="preserve">
+    <value>Load</value>
   </data>
   <data name="remainder" xml:space="preserve">
-    <value>剩余</value>
+    <value>Remainder</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="scan" xml:space="preserve">
+    <value>Start Scan</value>
   </data>
   <data name="select a folder" xml:space="preserve">
-    <value>选择文件夹</value>
+    <value>Select A Folder</value>
   </data>
   <data name="title" xml:space="preserve">
-    <value>磁盘和文件夹大小</value>
+    <value>Disk Usage</value>
   </data>
 </root>
