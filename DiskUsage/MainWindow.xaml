@@ -4,11 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiskUsage"
+        xmlns:converter="clr-namespace:DiskUsage.Converter"
         mc:Ignorable="d"
         xmlns:props ="clr-namespace:DiskUsage.Properties"
         DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
         Title="{x:Static props:Resources.title}" Height="450" Width="800">
+    
     <Grid>
+        <Grid.Resources>
+            <converter:StrToBoolConverter x:Key="StrToBoolConverter" /> <!-- 这个可以将相应的字符串转成单选框的选中值 -->
+            <converter:SizeConverter x:Key="SizeConverter" />
+        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
             <RowDefinition Height="1*" />
@@ -16,18 +22,30 @@
         <StackPanel Grid.Row="0" Orientation="Horizontal" >
             <Button Content="{x:Static props:Resources.all}" Margin="5,5,5,5"  Command="{Binding All}" />
             <Button Content="{x:Static props:Resources.select_a_folder}"  Margin="5,5,5,5"  Command="{Binding SelectFolder}"/>
-            <TextBox Width="300" Margin="5,5,5,5"  Text="{Binding SelectPath}"/>
+            <TextBox Width="300" Margin="5,5,5,5"  Text="{Binding SelectPath, Mode=TwoWay}"/>
             <Button Content="{x:Static props:Resources.scan}" Command="{Binding StartScan}"  Margin="5,5,5,5"  />
             <Label Content="{Binding State}"  />
             <Button Content="{x:Static props:Resources.save}"  Margin="5,5,5,5"  Command="{Binding Save}" />
             <Button Content="{x:Static props:Resources.load}"  Margin="5,5,5,5"  Command="{Binding Load}" />
+            <StackPanel Width="120" Orientation="Horizontal" Margin="5,5,5,5">
+                <RadioButton GroupName="SizeConvert" Content="{x:Static props:Resources.sizeMode_Kb}" IsChecked="{Binding SizeMode, Converter={StaticResource StrToBoolConverter}, ConverterParameter={x:Static props:Resources.sizeMode_Kb}}" />
+                <RadioButton GroupName="SizeConvert" Content="{x:Static props:Resources.sizeMode_Mb}" IsChecked="{Binding SizeMode, Converter={StaticResource StrToBoolConverter}, ConverterParameter={x:Static props:Resources.sizeMode_Mb}}" />
+                <RadioButton GroupName="SizeConvert" Content="{x:Static props:Resources.sizeMode_Auto}"  IsChecked="{Binding SizeMode, Converter={StaticResource StrToBoolConverter}, ConverterParameter={x:Static props:Resources.sizeMode_Auto}}"  />
+            </StackPanel>
         </StackPanel>
         <!-- 一个树形的控件显示内容 -->
         <TreeView  Grid.Row="1" ItemsSource="{Binding Folder}">
             <TreeView.ItemTemplate >
                 <HierarchicalDataTemplate  DataType="{x:Type local:FolderItem}" ItemsSource="{Binding Children}" >
                     <StackPanel Orientation="Horizontal" >
-                        <Label Content="{Binding Size}" ></Label>
+                        <Label >
+                            <Label.Content>
+                                <MultiBinding Converter="{StaticResource SizeConverter}">
+                                    <Binding Path="Size" />
+                                    <Binding Source="{StaticResource Locator}" Path="Main.SizeMode" />
+                                </MultiBinding>
+                            </Label.Content>
+                        </Label>
                         <Label Content="    " />
                         <Label Content="{Binding Info.Name}" />
                         <Label Content="    " />

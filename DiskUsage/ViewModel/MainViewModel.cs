@@ -50,6 +50,8 @@ namespace DiskUsage.ViewModel
                 State = "测试";
                 
             }
+            // 尺寸模式是自动。
+            SizeMode = DiskUsage.Properties.Resources.sizeMode_Auto;
 
         }
 
@@ -89,6 +91,17 @@ namespace DiskUsage.ViewModel
         {
             get { return _select_path; }
             set { _select_path = value; RaisePropertyChanged(() => SelectPath); }
+        }
+
+
+        private string _sizeMode;
+        /// <summary>
+        /// 当前的状态
+        /// </summary>
+        public string SizeMode
+        {
+            get { return _sizeMode; }
+            set { _sizeMode = value; RaisePropertyChanged(() => SizeMode); }
         }
 
 
@@ -143,7 +156,7 @@ namespace DiskUsage.ViewModel
         {
             get
             {
-                if (_start_scan == null) _select_folder = new RelayCommand(() =>
+                if (_start_scan == null) _start_scan = new RelayCommand(() =>
                 {
                     GetFolderItems(new string[] {SelectPath });
                 });
@@ -270,7 +283,11 @@ namespace DiskUsage.ViewModel
             // 下边是是定时器的方式来处理。
             System.Timers.Timer timer = new System.Timers.Timer(50);
             timer.Elapsed += new System.Timers.ElapsedEventHandler((s,e) => {
-                DispatcherHelper.CheckBeginInvokeOnUI(new Action(() => { State = Properties.Resources.count + ":" + count.ToString(); })); 
+                DispatcherHelper.CheckBeginInvokeOnUI(new Action(() => {
+                    // 这里要判断是以什么形式显示
+                    State = Properties.Resources.count + ":" + count.ToString(); }
+                
+                )); 
             });
             timer.Start();
 

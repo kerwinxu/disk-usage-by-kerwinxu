@@ -120,6 +120,9 @@
   <data name="all" xml:space="preserve">
     <value>All</value>
   </data>
+  <data name="auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
   <data name="btnOpen" xml:space="preserve">
     <value>btnOpen</value>
   </data>
@@ -140,6 +143,15 @@
   </data>
   <data name="select a folder" xml:space="preserve">
     <value>Select A Folder</value>
+  </data>
+  <data name="sizeMode_Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="sizeMode_Kb" xml:space="preserve">
+    <value>Kb</value>
+  </data>
+  <data name="sizeMode_Mb" xml:space="preserve">
+    <value>Mb</value>
   </data>
   <data name="title" xml:space="preserve">
     <value>Disk Usage</value>

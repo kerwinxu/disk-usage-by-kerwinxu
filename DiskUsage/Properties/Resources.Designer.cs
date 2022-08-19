@@ -70,6 +70,15 @@ namespace DiskUsage.Properties {
         }
         
         /// <summary>
+        ///   查找类似 Auto 的本地化字符串。
+        /// </summary>
+        public static string auto {
+            get {
+                return ResourceManager.GetString("auto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 btnOpen 的本地化字符串。
         /// </summary>
         public static string btnOpen {
@@ -129,6 +138,33 @@ namespace DiskUsage.Properties {
         public static string select_a_folder {
             get {
                 return ResourceManager.GetString("select a folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Auto 的本地化字符串。
+        /// </summary>
+        public static string sizeMode_Auto {
+            get {
+                return ResourceManager.GetString("sizeMode_Auto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Kb 的本地化字符串。
+        /// </summary>
+        public static string sizeMode_Kb {
+            get {
+                return ResourceManager.GetString("sizeMode_Kb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Mb 的本地化字符串。
+        /// </summary>
+        public static string sizeMode_Mb {
+            get {
+                return ResourceManager.GetString("sizeMode_Mb", resourceCulture);
             }
         }
         
