@@ -259,12 +259,20 @@ namespace DiskUsage.ViewModel
 
         #region 函数
 
+        private bool is_running;
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="paths"></param>
         private void GetFolderItems(string [] paths)
         {
+            // 如果有启动，就退出。
+            if (is_running)
+            {
+                return;
+            }
+            is_running = true;
             if (Folder == null)
             {
                 Folder = new List<FolderItem>();
@@ -276,7 +284,7 @@ namespace DiskUsage.ViewModel
                 // 一个新的。
                 List<FolderItem> folderItems = paths.Select(x => GetFolderItem(new DirectoryInfo(x))).ToList();
                 DispatcherHelper.CheckBeginInvokeOnUI(new Action(() => { Folder = folderItems; }));
-
+                is_running = false;
             });
             t.Start();
 
@@ -285,8 +293,12 @@ namespace DiskUsage.ViewModel
             timer.Elapsed += new System.Timers.ElapsedEventHandler((s,e) => {
                 DispatcherHelper.CheckBeginInvokeOnUI(new Action(() => {
                     // 这里要判断是以什么形式显示
-                    State = Properties.Resources.count + ":" + count.ToString(); }
-                
+                    State = Properties.Resources.count + ":" + count.ToString();
+                    if (!is_running)
+                    {
+                        timer.Stop();
+                    }
+                } 
                 )); 
             });
             timer.Start();

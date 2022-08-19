@@ -61,6 +61,15 @@ namespace DiskUsage.Properties {
         }
         
         /// <summary>
+        ///   查找类似 About 的本地化字符串。
+        /// </summary>
+        public static string abtou {
+            get {
+                return ResourceManager.GetString("abtou", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 All 的本地化字符串。
         /// </summary>
         public static string all {
